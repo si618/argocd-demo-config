@@ -13,7 +13,7 @@ spec:
 
   destination: 
     server: https://kubernetes.default.svc
-    namespace: argocd-demo-app
+    namespace: demo-app
 
   syncPolicy:
     syncOptions:
