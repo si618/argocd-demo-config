@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: nanajanashia/argocd-app:1.0
+        image: si618/argocd-demo-app:1.0.17
         ports:
         - containerPort: 5001
         resources:
