@@ -6,6 +6,6 @@ spec:
   selector:
     app: demo-app
   ports:
-  - port: 5001
+  - port: 42433
     protocol: TCP
-    targetPort: 5001
+    targetPort: 42433

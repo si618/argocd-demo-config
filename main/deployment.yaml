@@ -16,7 +16,7 @@ spec:
       - name: demo-app
         image: si618/argocd-demo-app:latest
         ports:
-        - containerPort: 5001
+        - containerPort: 42433
         resources:
           limits:
             memory: 512Mi
