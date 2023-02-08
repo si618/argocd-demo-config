@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: si618/argocd-demo-app:1.0.31
+        image: si618/argocd-demo-app:latest
         ports:
         - containerPort: 42433
         resources:
