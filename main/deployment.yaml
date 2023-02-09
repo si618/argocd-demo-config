@@ -15,8 +15,16 @@ spec:
       containers:
       - name: demo-app
         image: si618/argocd-demo-app:latest
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: 'Development'
+        - name: ASPNETCORE_URLS
+          value: 'https://+:80;http://+:443'
+        - name: ASPNETCORE_HTTPS_PORT
+          value: '443'
         ports:
-        - containerPort: 42433
+        - containerPort: 80
+        - containerPort: 443
         resources:
           limits:
             memory: 512Mi
