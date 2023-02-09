@@ -1,5 +1,5 @@
-# argocd-demo-config
-[ArgoCD](https://argo-cd.readthedocs.io/en/stable/) configuration for [argocd-demo-app](https://github.com/si618/argocd-demo-app) based on [Nana Janashia's tutorial](https://youtu.be/MeU5_k9ssrs) 🙇‍♂️
+# atops-demo-config
+[ArgoCD](https://argo-cd.readthedocs.io/en/stable/) configuration for [atops-demo-app](https://github.com/si618/atops-demo-app) based on [Nana Janashia's tutorial](https://youtu.be/MeU5_k9ssrs) 🙇‍♂️
 ## Setup
 Instructions to install Kubernetes via MicroK8s on three nodes (one controller-worker, two worker-only), ArgoCD and a demo application running on Ubuntu via [Multipass](https://multipass.run)
 
@@ -123,11 +123,11 @@ kubectl patch svc argo-cd-argocd-server -n argocd -p '{"spec": {"type": "LoadBal
 kubectl -n argocd get services | grep argocd-server
 ```
 
-### Install demo application
+### Install demo application configuration
 
 ```bash
-git clone https://github.com/si618/argocd-demo-config.git
-cd argocd-demo-config
+git clone https://github.com/si618/atops-demo-config.git
+cd atops-demo-config
 
 # Deploy demo app to cluster
 kubectl apply -f application.yaml

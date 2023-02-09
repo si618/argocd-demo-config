@@ -6,6 +6,9 @@ spec:
   selector:
     app: demo-app
   ports:
-  - port: 42433
+  - port: 80
     protocol: TCP
-    targetPort: 42433
+    targetPort: 80
+  - port: 443
+    protocol: TCP
+    targetPort: 443
