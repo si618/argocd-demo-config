@@ -1,0 +1,20 @@
+# Kudos blue42 🙇 https://blue42.net/devops/2021/k8s-kind-traefik/
+image:
+  name: traefik
+  pullPolicy: IfNotPresent
+service:
+  type: NodePort
+ports:
+  web:
+    nodePort: 30000
+  websecure:
+    nodePort: 30001
+nodeSelector:
+  ingress-ready: "true"
+tolerations:
+  - key: node-role.kubernetes.io/control-plane
+    operator: Equal
+    effect: NoSchedule
+  - key: node-role.kubernetes.io/master
+    operator: Equal
+    effect: NoSchedule
