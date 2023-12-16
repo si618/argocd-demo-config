@@ -69,10 +69,10 @@ helm install argo-cd argo/argo-cd -n argocd --create-namespace -f ./config/argoc
 kubectl -n argocd wait --for=condition=Ready pods --all --timeout=88s
 
 # Change argocd-dashboard from ClusterIP to LoadBalancer to enable host access
-kubectl patch svc argo-cd-argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+kubectl -n argocd patch svc argo-cd-argocd-server -p '{"spec": {"type": "LoadBalancer"}}'
 
 # Change argocd-server to run insecurely for demo
-kubectl patch deployment argo-cd-argocd-server --patch-file ./config/argocd.patch.json --type=json
+kubectl -n argocd patch deployment argo-cd-argocd-server --patch-file ./config/argocd.patch.json --type=json
 
 # Create ingress route for argocd UI
 kubectl apply -f ./config/argocd.ingressroute.yaml
