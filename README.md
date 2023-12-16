@@ -1,12 +1,12 @@
-# demo-ops-config
+# ops-demo-config
 
-[ArgoCD](https://argo-cd.readthedocs.io/en/stable/) configuration for [demo-ops-app](https://github.com/si618/demo-ops-app) based on [Nana Janashia's tutorial](https://youtu.be/MeU5_k9ssrs) 🙇‍♂️
+[ArgoCD](https://argo-cd.readthedocs.io/en/stable/) configuration for [ops-demo-app](https://github.com/si618/ops-demo-app) based on [Nana Janashia's tutorial](https://youtu.be/MeU5_k9ssrs) 🙇‍♂️
 
 ## Setup
 
 ```bash
-git clone https://github.com/si618/demo-ops-config
-cd ./demo-ops-config
+git clone https://github.com/si618/ops-demo-config
+cd ./ops-demo-config
 ```
 
 ### Installation using Podman on WSL

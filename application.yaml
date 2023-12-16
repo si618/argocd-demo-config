@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-ops-app
+  name: ops-demo-app
   namespace: demo
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/si618/demo-ops-config.git
+    repoURL: https://github.com/si618/ops-demo-config.git
     targetRevision: HEAD
     path: main
 
   destination: 
     server: https://kubernetes.default.svc
-    namespace: demo-ops-app
+    namespace: ops-demo-app
 
   syncPolicy:
     syncOptions:
